@@ -1,0 +1,20 @@
+// For Sorting solved questions
+
+
+	1. Square of Sorted Array -> easy
+	2. Largest Number -> medium
+ 	3. Merge Intervals -> medium
+	
+	
+// For Binary Search Question
+
+	1. Binary Search -> Easy
+	2. Sqrt(x) -> Easy
+	3. Find first and last position of element in sorted array -> Medium -> two used once to find last and once first
+	4. Single element of sorted array -> Medium -> used even odd -> if even compare with +1 if odd mid--
+	6. Search in Rotated sorted array I -> Medium -> striver method to find sorted array and search in it
+	7. Peak Index in Mountain Array -> Medium
+	8. Search in 2D Matrix -> Medium -> Binary search to find row then Binary search in that row  O(Log(m*n))
+	9. Search in 2D Matrix II -> Medium -> Stair Case logic O(m+n)
+	
+	

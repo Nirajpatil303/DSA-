@@ -1,0 +1,122 @@
+
+//Merge sort algo refer TUF
+
+import java.util.*;
+public class Main
+{   
+    //merge algoritm 
+    public static void merge(int[] arr,int low,int mid,int high)
+    {
+        ArrayList<Integer> temp = new ArrayList<>();
+        int left=low;
+        int right= mid+1;
+        //sorting two array left and right and putting into temp which is sorted array
+        while(left<=mid && right<=high)
+        {
+            if(arr[left]<=arr[right])
+            {
+                temp.add(arr[left]);
+                left++;
+            }
+            else 
+            {
+                temp.add(arr[right]);
+                right++;
+            }
+        }
+        while(left<=mid)
+        {
+            temp.add(arr[left]);
+            left++;
+        }
+        while(right<=high)
+        {
+            temp.add(arr[right]);
+            right++;
+        }
+        // putting temp which is sorted array back to array
+        for(int i=low;i<=high;i++)
+        {
+            arr[i]=temp.get(i-low);
+        }
+    }
+    
+    
+    //sort algo
+    public static void mergesort(int[] arr,int low,int high)
+    {
+        //base case which is if it has only one last element as array that is low == high
+        if(low>=high) return;
+        //logic
+        int mid=(low+high)/2;
+        mergesort(arr,low,mid);   //left part 
+        mergesort(arr,mid+1,high); //right part
+        merge(arr,low,mid,high);
+        
+    }
+    
+    
+    
+	public static void main(String[] args) {
+		//main algo here
+		int[] arr={1,5,7,6,3,2,5,0,-2,-4};
+		mergesort(arr,0,arr.length-1);
+		System.out.println(Arrays.toString(arr));
+	}
+}
+
+//Quick sort algo refered from learnyard
+//in sorting we are taking last element as pivot putting all low element to left and then swap it with the pivot and pointer
+
+import java.util.*;
+public class Main
+{   
+	//swaping algo as used preety often
+	public static void swap(int[] arr,int a,int b)
+	{
+		int temp=arr[a];
+		arr[a]=arr[b];
+		arr[b]=temp;
+	}
+    //sorting algo
+    public static int sorting(int[] arr,int low,int high)
+    {
+		//last element as pivot
+		int pivot = arr[high];
+		int point= low;
+		//small parts at left of array leaving pivot out of itration
+		for(int i=low;i<=high-1;i++)
+		{
+			if(arr[i]<pivot)
+			{
+				swap(arr,i,point);
+				point++;
+			}
+			
+		}
+		
+		//swaping pivot at correct postion
+		swap(arr,point,high);
+		return point;
+	
+    }
+
+    //recursion algo
+    public static void quicksort(int[] arr,int low,int high)
+    {
+        //base case 
+        if(low>=high) return;
+        //logic
+        int pivot = sorting(arr,low,high);
+        quicksort(arr,low,pivot-1);    
+        quicksort(arr,pivot+1,high);
+
+    }
+
+	public static void main(String[] args) {
+		//main algo here
+		int[] arr={1,5,7,6,3,2,3,5,0,-2,-4};
+		quicksort(arr,0,arr.length-1);
+		System.out.println(Arrays.toString(arr));
+	}
+}

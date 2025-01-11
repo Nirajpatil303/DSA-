@@ -1,0 +1,22 @@
+there is print and println these are different in sout 
+as print will print there and cursor will be in same line where as in println in next line
+
+ArrayList<Integer> list=new ArrayList<>(); //////is the syntax for the array list
+Here we use Integer and not int as int is primitive data type we use wrapper class here
+.add(value)
+.contains(value)
+.set(index,value)
+.remove(index)
+.get(index)
+List[index] will not work like arr[i] use get
+
+internally arraylist size is fixed
+1.half filled
+2.new list created arraylist of double size
+3.copy form there to next
+4.delete before
+
+can create multi dimenstion array add arraylist
+check in the arraylist part 
+
+reverse done by swap s and end

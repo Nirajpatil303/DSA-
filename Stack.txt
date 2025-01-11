@@ -1,0 +1,47 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+
+class Main {
+	int capacity = 5;
+	int top=-1;
+	int arr[] = new int[5];
+	public static void pop()
+	{
+		if(top==-1)
+		{
+			print stack is empty
+		}
+		else
+		{
+			top--;
+		}
+	}
+	public static int peek()
+	{
+		if(top==-1)
+		{
+			return -1;
+		}
+		else
+		{
+			return arr[top];
+		}
+	}
+	public static void push(int element)
+	{
+		if(top==capacity)
+		{
+			print stack is full
+		}
+		else
+		{
+			top++;
+			arr[top]=element;
+		}
+	}
+    public static void main(String[] args) {      
+        
+    }
+}

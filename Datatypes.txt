@@ -1,0 +1,28 @@
+-DATA TYPES
+PRIMITIVES AND NON PRIMITIVES 
+(Any data type which cannot be furture break into more datatypes)
+PRIMITIVES - int char float(f) double long(l/L) boolean 
+	int rollno=234;
+        char letter='A';
+        float marks=34.3443f;
+        double lre=34535.3452345;
+        long largenumber=23543245435345l;
+        boolean check=false;
+
+Type Casing--??
+math class functions check --??
+Math.max(c,Math.max(a,b)) to find the max of three numbers
+
+char input (take a string and take first letter of it as nextChar is not there)
+char ch= sc.next().trim().charAt(0);
+
+conditional
+AND && OR || NOT !=
+No need to use the ascii value to compaer the alphabates lower or upper
+if(ch>='a' && ch<='z') this will give the lower case 
+
+== vs .equalsto
+== -> check if the kunal object is same that is the reference
+.equalsto -> check if kunal is same by values
+
+switch there is more cleaner verion i.e -> which doesnt need break to be added
